@@ -117,6 +117,11 @@ if(!empty($_GET["p"]))
         include("view/cetak.php");
     }
     
+    else if ($p=="snk")
+    {
+        include("view/sdank.php");
+    }
+    
     else 
     {
        include ("view/404.php");
