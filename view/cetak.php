@@ -64,7 +64,7 @@ $dt=$data->tampil($con,$id);
 <tr>
 <td colspan="2"> NB : Bukti pendaftaran ini harap dibawa pada saat pelaksaan Olympiade sebagai bukti untuk melakukan registrasi ulang </td>
 
-<?php $qr="eos2020 - ".$dt['nopeserta']; ?>
+<?php $qr=$dt['nopeserta']; ?>
 </tr>
 <tr>
     <td><?php QRcode::png($qr,'image.png','L',4,4); ?><img src="image.png"></td>
