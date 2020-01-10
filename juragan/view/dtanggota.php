@@ -9,7 +9,7 @@
                   <?php $dt = $data->tampil($con);
                   if ($dt > 0)
                   {
-                      echo ' <a href="" class="btn-sm btn-success" type="reset"><I class="fa fa-print"></I> CETAK DATA PENDAFTAR</a>
+                      echo ' <a href="?p=cetak" class="btn-sm btn-success" type="reset"><I class="fa fa-print"></I> CETAK DATA PENDAFTAR</a>
                   <a href="?p=ex" class="btn-sm btn-danger" type="reset"> <I class="fa fa-file-excel-o"></I> DOWNLOAD FORMAT EXCEL</a>';
                   }else
                   {

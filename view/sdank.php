@@ -41,7 +41,7 @@
               <img src="img/bgeos.jpeg" class="img-responsive">
             </div>
             <div class="box-header with-border">
-             <a href="?p=<?php echo md5('daftareos'); ?>" class="btn btn-info">DAFTAR SEKARANG !</a>
+             <a href="?p=<?php echo md5('daftareos'); ?>" class="btn btn-info btn-block"></a>
              
           </div>
     
