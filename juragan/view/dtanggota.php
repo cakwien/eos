@@ -25,6 +25,7 @@
             <thead>      
                 <tr>
                   <th style="width: 10px">#</th>
+                  <th>No. Pendaftaran</th>
                   <th>Nama Lengkap</th>
                   <th>TimeStamp</th>
                   <th>L/P</th>
@@ -41,6 +42,7 @@
                   <tbody>
                 <tr>
                   <td> <?php echo $no; ?> </td>
+                  <td><?php echo $isi['nopeserta']; ?></td>
                   <td><?php echo $isi['nama']; ?></td>
                   <td><?php $ts=date('d-m-Y h:i:s',strtotime($isi['tgldaftar'])); echo $ts; ?></td>
                   <td><?php echo $isi['jeniskelamin']; ?></td>
