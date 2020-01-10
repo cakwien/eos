@@ -74,6 +74,13 @@ class data
         return $note;
             
     }
+    
+    function bykelas($con,$kelas)
+    {
+        $q=mysqli_query($con,"select count(kelas) as jumlah from peserta where kelas = '$kelas'");
+        $dt=mysqli_fetch_array($q);
+        return $dt; 
+    }
 }
 
 ?>
