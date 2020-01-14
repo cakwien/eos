@@ -67,6 +67,7 @@ if(!empty($_GET["p"]))
             $alamat=$_POST['alamat'];
             $telp=$_POST['telp'];
             $sekolah=$_POST['sekolah'];
+            $kecamatan=$_POST['kecamatan'];
             $kelas=$_POST['kelas'];
             $pendamping=$_POST['pendamping'];
             $telpendamping=$_POST['telpendamping'];

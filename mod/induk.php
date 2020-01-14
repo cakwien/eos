@@ -54,9 +54,6 @@ class data{
            
            
        }
-       
-       
-      
    }
     
     function tampil($con,$id)
@@ -64,6 +61,17 @@ class data{
         $q=mysqli_query($con,"select * from peserta where nopeserta='$id'");
         $dt=mysqli_fetch_array($q);
         return $dt; 
+    }
+    
+    function kecamatan($con)
+    {
+        $list=array();
+        $q=mysqli_query($on,"Select * from kecamatan order by kecamatan");
+        while($dt=mysqli_fetch_array($q))
+        {
+            $list[]=$dt;
+        }
+        return $list;
     }
     
     

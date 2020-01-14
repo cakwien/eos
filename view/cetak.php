@@ -1,11 +1,20 @@
 <script>
     window.print();
-    setTimeout(function(){window.location.href='?p=<?php echo md5("daftareos"); ?>'},3000)
+   //setTimeout(function(){window.location.href='?p=<?php echo md5("daftareos"); ?>'},3000)
+    
+    function balik()
+    {
+        window.history.back(-1);
+    }
+    
 </script>
 
 <?php
-include ("qr/qrlib.php");
+    include ("qr/qrlib.php");
 ?>
+
+<head>
+<title>EOS SMKN 1 BANYUWANGI 2020</title>
 
 <style>
 table.minimalistBlack {
@@ -44,6 +53,10 @@ table.minimalistBlack tfoot td {
 }
 </style>
 
+</head>
+    
+    
+<body onfocus="balik()" >
 
 <?php
 $dt=$data->tampil($con,$id);
@@ -97,3 +110,4 @@ $dt=$data->tampil($con,$id);
 </tbody>
 </table>
 <br>
+</body>
