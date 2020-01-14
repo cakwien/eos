@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jan 2020 pada 06.30
+-- Waktu pembuatan: 14 Jan 2020 pada 03.20
 -- Versi server: 10.1.36-MariaDB
 -- Versi PHP: 7.2.11
 
@@ -25,6 +25,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `kecamatan`
+--
+
+CREATE TABLE `kecamatan` (
+  `idkecamatan` int(11) NOT NULL,
+  `kecamatan` varchar(30) NOT NULL,
+  `sesi` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `kecamatan`
+--
+
+INSERT INTO `kecamatan` (`idkecamatan`, `kecamatan`, `sesi`) VALUES
+(1, 'Banyuwangi', '1'),
+(2, 'Glagah', '1'),
+(3, 'Giri', '1'),
+(4, 'Licin', '1'),
+(5, 'Kalipuro', '1'),
+(6, 'Kabat', '1'),
+(7, 'Muncar', '2'),
+(8, 'Rogojampi', '1'),
+(9, 'Songgon', '2'),
+(10, 'Srono', '2'),
+(11, 'Singojuruh', '2'),
+(12, 'Blimbingsari', '2'),
+(13, 'Bangorejo', '2'),
+(14, 'Cluring', '2'),
+(15, 'Pesanggaran', '2'),
+(16, 'Purwoharjo', '2'),
+(17, 'Tegaldlimo', '2'),
+(18, 'Gambiran', '2'),
+(19, 'Genteng', '2'),
+(20, 'Glenmore', '2'),
+(21, 'Kalibaru', '2'),
+(22, 'Siliragung', '2'),
+(23, 'Tegalsari', '2'),
+(24, 'Wongsorejo', '2');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `peserta`
 --
 
@@ -37,6 +79,7 @@ CREATE TABLE `peserta` (
   `tplahir` varchar(30) NOT NULL,
   `tglahir` varchar(30) NOT NULL,
   `alamat` varchar(150) NOT NULL,
+  `idkecamatan` int(11) NOT NULL,
   `telp` varchar(15) NOT NULL,
   `sekolah` varchar(50) NOT NULL,
   `kelas` enum('VII','VIII','IX') NOT NULL,
@@ -64,12 +107,17 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`iduser`, `nama`, `username`, `password`) VALUES
-(1, 'Admin1', 'admin', '827ccb0eea8a706c4c34a16891f84e'),
 (2, 'admin1', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `kecamatan`
+--
+ALTER TABLE `kecamatan`
+  ADD PRIMARY KEY (`idkecamatan`);
 
 --
 -- Indeks untuk tabel `peserta`
