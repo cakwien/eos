@@ -152,8 +152,21 @@
                  
                    <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">Asal Sekolah :</label>
-                  <div class="col-md-10 col-sm-4">
+                  <div class="col-md-5 col-sm-2">
                     <input type="text" class="form-control"  placeholder="SMP Asal" name="sekolah" value="" required>
+                  </div>
+                    <div class="col-md-5 col-sm-2">
+                    <select class="form-control">
+                        <option>Kecamatan Sekolah</option>
+                        <?php
+                        $k=$data->kecamatan($con);
+                        foreach ($k as $kec)
+                        {
+                        ?>
+                        <option value="<?php echo $kec['idkecamatan'];?>"><?php echo $kec['kecamatan'];?></option>
+                        <?php 
+                        } ?>
+                        </select>
                   </div>
                 </div>
                  

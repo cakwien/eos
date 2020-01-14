@@ -66,7 +66,7 @@ class data{
     function kecamatan($con)
     {
         $list=array();
-        $q=mysqli_query($on,"Select * from kecamatan order by kecamatan");
+        $q=mysqli_query($con,"select * from kecamatan order by kecamatan");
         while($dt=mysqli_fetch_array($q))
         {
             $list[]=$dt;
